@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT FAMILY-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&family=Source+Sans+Pro:ital,wght@0,600;1,300;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,100;1,200;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--ION ICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="icon" href="./images/bmi-calculator-1506363-1275697.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="container">
+            <h3>BMI Calculator</h3>
+
+            <div class="content">
+                <div class="gender">
+                    <span>What are you</span>
+                    <div class="gender-images">
+                        <div class="male">
+                            <div class="male-img gender-img">
+                                <img src="./images/male-svgrepo-com.svg" alt="male">
+                            </div>
+                            <p>Male</p>
+                        </div>
+                        <div class="female">
+                            <div class="female-img gender-img">
+                                <img src="./images/female-svgrepo-com.svg" alt="female">
+                            </div>
+                            <p>female</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="age">
+                    <div class="age-input">
+                        <span>What's your age</span>
+                        <input type="number" name="age" id="age" value="">
+                    </div>
+                </div>
+                <div class="measure">
+                    <div class="height">
+                        <span>What's your height</span>
+                        <div class="height-p">
+                            <input type="number" name="height" id="height" value="">
+                            <span>cm</span>
+                        </div>
+                    </div>
+                    <div class="width">
+                        <span>What's your weight</span>
+                        <div class="width-p">
+                            <input type="number" name="weight" id="weight" value="">
+                            <span>kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculate">
+                <button class="bmi-btn">
+                    Calculate your BMI
+                </button>
+            </div>
+            <div class="success none">
+                <div class="suc-img">
+                    <div class="you">U</div>
+                    <div class="eight">8</div>
+                </div>
+                <div class="result">
+                    23.1 kg/m
+                </div>
+                <p class="suc-text">
+                    You have normal body weight
+                </p>
+                <a href="#" class="back">
+                    Back
+                </a>
+            </div>
+
+            <div class="correct-box">
+                Please fill out the required field
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

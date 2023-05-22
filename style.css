@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background: linear-gradient(110deg ,#212529 50%,#495057 50%);
+    background-repeat: no-repeat;
+    color: #fff;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    letter-spacing: 0.7px;
+    height: 100vh;
+}
+
+.display{
+    display: none;
+}
+
+/********************************/
+/*********CALCULATOR ************/
+/********************************/
+.calculator{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding-top: 9rem;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4rem;
+}
+
+.blue-green{
+    background: linear-gradient(to bottom, #CDDC39, #8BC34A);
+}
+/*
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+*/
+.container h3{
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+
+.gender span{
+    font-size: 1.4rem;
+    color: #dee2e6;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 1.8rem;
+}
+
+.gender-images{
+    display: flex;
+    align-items: center;
+    gap: 3.3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.gender-images img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.male,.female{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.male-img,.female-img{
+    cursor: pointer;
+    padding: 2.5rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.gender-images p{
+    font-size: 1.2rem;
+    color: #dee2e6;
+}
+
+.age{
+    padding: 2rem 0rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.age span{
+    font-size: 1.3rem;
+    color: #dee2e6;
+    display: inline-block;
+    padding-bottom: 1.2rem;   
+}
+
+.measure{
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.measure span{
+    font-size: 1.3rem;
+    color: #dee2e6;
+    display: inline-block;
+    padding-bottom: 1.2rem;
+}
+
+input{
+    display: block;
+    width: 7rem;
+    height: 3rem;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 3.4rem;
+    color: #fff;
+}
+
+input:focus{
+    background-color: #212529;
+}
+
+.calculate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+button{
+    background: linear-gradient(to bottom, #CDDC39, #8BC34A);
+    color: #212529;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    padding: 0.8rem 3rem;
+    box-shadow: none;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.height-p,.width-p{
+    font-size: 4rem;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 0.3rem;
+}
+
+.height-p input,.width-p input{
+    width: 7rem;
+}
+
+.suc-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.you,.eight{
+    font-size: 5rem;
+    color: #8BC34A;
+    font-weight: 600;
+    display: inline;
+}
+
+.eight{
+    margin-top: -5.5rem;
+    transform: rotate();
+}
+
+.result{
+    color: #fff;
+    font-size: 3.9rem;
+    font-weight: 600;
+}
+
+.suc-text,.back{
+    text-decoration: none;
+    color: #8BC34A;
+    font-size: 1.3rem;
+    padding-top: 1.5rem;
+}
+
+.success{
+    z-index: 22;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(110deg ,#212529 50%,#495057 50%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.age-input input{
+    background: #dee2e6;
+    color: #212529;
+}
+
+.none{
+    display: none;
+}
+
+.width-p input{
+    background:#212529;
+}
+
+.height-p input{
+    background: #495057;
+}
+
+.correct-box{
+    background: linear-gradient(110deg ,#212529 50%,#495057 50%);
+    color: #dee2e6;
+    font-size: 2rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+    padding: 3rem 1.2rem;
+    transform: translateY(-180vh);
+}
+
+.anime{
+    animation: moveDown 8s linear;
+}
+
+@keyframes moveDown{
+    0%{
+        transform: translateY(-180vh);
+    }
+
+    40%{
+        transform: translateY(-83vh);
+    }
+
+    80%{
+        transform: translateY(-83vh);
+    }
+
+    100%{
+        transform: translateY(-180vh);
+    }
+}
+
+@media(max-width: 900px){
+    html{
+        font-size: 70%;
+    }
+
+    .success{
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px){
+    .container{
+        padding-top: 10rem;
+    }
+
+    .container h3{
+        font-size: 2rem;
+    }
+
+    .calculate{
+        margin-top: 0rem;
+    }
+
+    .age span,.gender span,.measure span{
+        font-size: 1.1rem;
+        color: #fff;
+        opacity: 0.8;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 74%;
+    }
+
+    .measure{
+        padding-bottom: 3.6rem;
+    }
+
+    .calculator{
+        display: block;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .age{
+        padding-bottom: 3.1rem;
+    }
+
+    .container{
+        padding-top: 6rem;
+    }
+
+    .gender-images{
+        padding-bottom: 2.8rem;
+    }
+
+    @keyframes moveDown{
+        0%{
+            transform: translateY(-180vh);
+        }
+    
+        40%{
+            transform: translateY(-70vh);
+        }
+    
+        80%{
+            transform: translateY(-70vh);
+        }
+    
+        100%{
+            transform: translateY(-180vh);
+        }
+    }
+
+    .anime{
+        animation: moveDown 8s linear;
+    }
+
+    .age{
+        padding-bottom: 2.8rem;
+    }
+
+    .measure{
+        padding-bottom: 4rem;
+    }
+
+    .correct-box{
+        font-size: 1.4rem;
+    }
+}
